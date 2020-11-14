@@ -2,4 +2,16 @@
     <string name="app_name">Aid.id</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Aid.id</string>
+    <string name="password">Password</string>
+    <string name="forgot_password">Forgot password?</string>
+    <string name="email">Email</string>
+    <string name="welcome_to_aid_id">Welcome to Aid.id!</string>
+    <string name="register">REGISTER</string>
+    <string name="login">Login</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="about_aid_id">Aid.id is a reliable platform to contribute to humanity by donating items and needs</string>
+    <string name="welcome">Ready to Contribute with Aid.id?</string>
+    <string name="get_started">Get Started</string>
+    <string name="already_have_an_account_login">Already Have an Account, Login ?</string>
+    <string name="splashscreen">SplashScreen</string>
 </resources>
