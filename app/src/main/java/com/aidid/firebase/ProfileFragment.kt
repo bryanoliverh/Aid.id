@@ -11,6 +11,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.navigation.Navigation
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.UserProfileChangeRequest
 import com.google.firebase.ktx.Firebase
@@ -111,12 +112,25 @@ class ProfileFragment : Fragment() {
 
         }
     }
+        //when you click edit email it will redirect to edit email page
+        etEmail.setOnClickListener{
+            val actionUpdateEmail = ProfileFragmentDirections.actionUpdateEmail()
+            Navigation.findNavController(it).navigate(actionUpdateEmail)
+            //ketika di etemail diklik akan pindah ke update email fragment
+        }
+        //press change password to switch to change password page
+        tvChangePassword.setOnClickListener{
+            val  actionChangePassword = ProfileFragmentDirections.actionChangePassword()
+            Navigation.findNavController(it).navigate(actionChangePassword)
+        }
     }
     private fun intentCamera(){
         Intent(MediaStore.ACTION_IMAGE_CAPTURE).also {intent ->
             activity?.packageManager?.let {
                 intent.resolveActivity(it).also {
                     startActivityForResult(intent, REQUEST_CAMERA)
+
+
                 }
             }
 
