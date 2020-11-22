@@ -10,8 +10,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.aidid"
         android:usesCleartextTraffic="true">
-        <activity android:name=".ResetPasswordActivity"></activity>
-        <activity android:name=".activity_abkristanto" />
+        <activity android:name=".HomePage"/>
+        <activity android:name=".ResetPasswordActivity" />
         <activity android:name=".SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
