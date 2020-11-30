@@ -17,4 +17,6 @@
     <string name="intro">With AID.ID we help every people by doing a donation</string>
     <string name="LoremIpsum">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</string>
     <string name="hospital">Hospital</string>
+    <string name="list_of_donation_available">List of Donation Available :</string>
+    <string name="view_all">View All</string>
 </resources>
