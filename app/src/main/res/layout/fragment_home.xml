@@ -30,7 +30,7 @@
                     android:layout_width="371dp"
                     android:layout_height="100dp"
                     android:layout_gravity="center"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="5dp"
                     android:backgroundTint="@color/colorTosca"
                     android:elevation="100dp"
                     android:padding="10dp"
@@ -84,14 +84,5 @@
                 android:textSize="15sp"/>
         </LinearLayout>
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recyclerView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/DonationAvailable"
-            android:orientation="horizontal"
-            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-            tools:itemCount="3"
-            tools:listitem="@layout/donationlist" />
     </RelativeLayout>
 </ScrollView>

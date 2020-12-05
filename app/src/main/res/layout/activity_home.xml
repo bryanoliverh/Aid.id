@@ -21,7 +21,7 @@
         app:layout_constraintVertical_bias="0.0"
         app:subtitleTextColor="#FFFFFF"
         app:titleTextAppearance="@style/NoText"
-        app:titleTextColor="@android:color/white">
+        app:titleTextColor="@android:color/black">
 
         <ImageView
             android:layout_width="100dp"
@@ -44,8 +44,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/nav_host_fragment"
-        app:menu="@menu/bottom_nav_menu"
-        />
+        app:menu="@menu/bottom_nav_menu"        />
 
     <fragment
         android:id="@+id/nav_host_fragment"
