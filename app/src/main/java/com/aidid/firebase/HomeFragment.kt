@@ -88,12 +88,11 @@ class HomeFragment : Fragment() {
         // Inflate the layout for this fragment
 
         val view: View = inflater.inflate(R.layout.fragment_home, container, false)
-
-        view.hospital.setOnClickListener { view ->
+        view.buttonhospital.setOnClickListener { view ->
             inflater.inflate(R.layout.activity_hospital,container, false)
         }
 
-        view.orphanage.setOnClickListener { view ->
+        view.buttonorphanage.setOnClickListener { view ->
             Log.d("Orphanage", "Selected")
         }
 

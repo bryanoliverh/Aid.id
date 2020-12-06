@@ -2,6 +2,7 @@
 <ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -80,45 +81,40 @@
                 android:text="@string/view_all"
                 android:textColor="@color/black"
                 android:textSize="15sp"/>
+
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/fulllistdonation"
-            android:layout_width="420dp"
+            android:id="@+id/afterlistdonation"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/DonationAvailable"
-            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
             android:layout_marginTop="0dp"
             android:layout_marginEnd="0dp"
             android:orientation="horizontal">
 
-            <Button
-                android:id="@+id/hospital"
-                android:layout_width="200dp"
+            <ImageButton
+                android:id="@+id/buttonhospital"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/poppins_semibold"
-                android:text="Hospital"
-                android:layout_marginStart="4dp"
-                android:textColor="@color/black"
-                android:textSize="20sp"
-                android:elevation="25dp"
-                app:cornerRadius="10dp"
-                app:backgroundTint="@color/colorTosca"/>
+                android:layout_marginStart="10dp"
+                android:src="@drawable/hospital1"
+                android:background="@color/white"
+                android:textAlignment="center"
+                app:cornerRadius="10dp"/>
 
-            <Button
-                android:id="@+id/orphanage"
-                android:layout_width="200dp"
+            <ImageButton
+                android:id="@+id/buttonorphanage"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/poppins_semibold"
-                android:text="Orphanage"
-                android:layout_marginStart="3dp"
-                android:textColor="@color/black"
-                android:textSize="20sp"
-                android:elevation="25dp"
-                app:cornerRadius="10dp"
-                app:backgroundTint="@color/colorTosca"/>
-
+                android:layout_marginStart="10dp"
+                android:src="@drawable/orpanage"
+                android:background="@color/white"
+                android:textAlignment="center"
+                app:cornerRadius="10dp"/>
 
         </LinearLayout>
+
     </RelativeLayout>
 </ScrollView>

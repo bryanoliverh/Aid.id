@@ -15,7 +15,8 @@ import kotlinx.android.synthetic.main.activity_home.*
 class HomeActivity : AppCompatActivity() {
     private lateinit var auth: FirebaseAuth
 
-    override fun onCreate(savedInstanceState: Bundle?) {
+    override fun onCreate(savedInstanceState: Bundle?)
+    {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
         setSupportActionBar(toolbar)
@@ -28,13 +29,18 @@ class HomeActivity : AppCompatActivity() {
         setupActionBarWithNavController(navController, appBarConfiguration)
         nav_bottom.setupWithNavController(navController)
 
+        val fragment1 = HomeFragment()
+        supportFragmentManager.beginTransaction().replace(R.id.nav_host_fragment, fragment1)
     }
-        override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean
+    {
         menuInflater.inflate(R.menu.option_menu, menu)
             return true
-        }
+    }
 
-        override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        override fun onOptionsItemSelected(item: MenuItem): Boolean
+        {
 
             when(item.itemId)
            {R.id.logout->{
