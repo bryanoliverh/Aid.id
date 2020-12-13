@@ -16,7 +16,6 @@
         <activity android:name=".NotificationsActivity" />
         <activity android:name=".AboutusActivity" />
         <activity android:name=".SettingsMain" />
-        <activity android:name=".Hospital" />
         <activity android:name=".ResetPasswordActivity" />
         <activity android:name=".SplashScreen">
             <intent-filter>
