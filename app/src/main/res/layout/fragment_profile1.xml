@@ -73,13 +73,10 @@
                 android:hint="Please Enter Your Phone Number"
                 android:focusableInTouchMode="false"
                 android:inputType="phone"
-                android:enabled="true"
-                android:text=""
-                android:cursorVisible="true"
                 app:layout_constraintEnd_toEndOf="@+id/etName"
                 app:layout_constraintStart_toStartOf="@+id/etEmail"
                 app:layout_constraintTop_toBottomOf="@+id/etEmail"
-                android:autofillHints="" />
+                android:importantForAutofill="no"/>
 
             <Button
                 android:id="@+id/btnUpdate"
