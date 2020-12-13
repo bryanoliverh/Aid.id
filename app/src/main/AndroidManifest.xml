@@ -10,7 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.aidid"
         android:usesCleartextTraffic="true">
-        <activity android:name=".Hospital"></activity>
+        <activity android:name=".UsersupportActivity"></activity>
+        <activity android:name=".TncActivity" />
+        <activity android:name=".SettingsActivity" />
+        <activity android:name=".NotificationsActivity" />
+        <activity android:name=".AboutusActivity" />
+        <activity android:name=".SettingsMain" />
+        <activity android:name=".Hospital" />
         <activity android:name=".ResetPasswordActivity" />
         <activity android:name=".SplashScreen">
             <intent-filter>

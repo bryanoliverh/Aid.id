@@ -11,12 +11,15 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import android.widget.EditText
+import android.widget.TextView
 import androidx.navigation.Navigation
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.UserProfileChangeRequest
 import com.google.firebase.ktx.Firebase
 import com.google.firebase.storage.FirebaseStorage
 import com.squareup.picasso.Picasso
+import kotlinx.android.synthetic.*
 import kotlinx.android.synthetic.main.fragment_profile1.*
 import kotlinx.android.synthetic.main.fragment_profile1.*
 import java.io.ByteArrayOutputStream
@@ -54,6 +57,7 @@ class ProfileFragment : Fragment() {
             }
             etName.setText(user.displayName)
             etEmail.setText(user.email)
+            etPhone.setText(user.phoneNumber)
             if (user.isEmailVerified) {
                 icVerified.visibility = View.VISIBLE
             } else {
@@ -84,10 +88,19 @@ class ProfileFragment : Fragment() {
                 etName.error = "Please Enter Your Name"
                 etName.requestFocus()
                 return@setOnClickListener
-            }//user profile yang akan diupload ke firebase
+            }
+            val phone =etPhone.text.toString().trim()
+            if (phone.isEmpty()) {
+                etPhone.error = "Please Enter Your Phone Number"
+                etPhone.requestFocus()
+                return@setOnClickListener
+            }
+
+            //user profile yang akan diupload ke firebase
             UserProfileChangeRequest.Builder()
                     .setDisplayName(name) //nama yang diimput
                     .setPhotoUri(image)//uri image yang ditentukan
+
             //foto yang disimpan hanya url saja, jadi foto bisa diupload ke  firebase storage
                     .build().also{
                         user?.updateProfile(it)?.addOnCompleteListener{

@@ -51,8 +51,18 @@ class HomeActivity : AppCompatActivity() {
                }
             return true
            }
+                R.id.settings-> {
+                    Intent(this@HomeActivity, SettingsActivity::class.java).also {
+                        it.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+                        startActivity(it)
+                    }
+                    return true
+                }
         else -> return true
            }
 
-    }
-}
+        }
+
+            }
+
+
