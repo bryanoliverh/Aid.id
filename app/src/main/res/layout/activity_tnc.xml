@@ -6,24 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".TncActivity">
 
-    <TextView
-        android:id="@+id/usersupview"
-        android:layout_width="334dp"
-        android:layout_height="540dp"
-        android:layout_marginTop="20dp"
-        android:fontFamily="@font/poppins_semibold"
-
-        android:text="1. Every help and contributions are suggested to be sent to Aid.id to ease the confirmation.
-        We will distribute the donation 100%, and users can check to the institute for certainty.\n\n2. Every items donated must be appropriate with the details given. \n\n3. Here, there are transparancy that allows you to check the item’s distribution and confirmation. \n\n4. Any unsuitable items may be returned or  used depends on the institue decision.\n\n5.  The rewards and appreciations can be excanged by collecting points from your total donations."
-        android:textAlignment="gravity"
-        android:textColor="@color/colorPrimary"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.493"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView5"
-        app:layout_constraintVertical_bias="0.0" />
-
     <ImageView
         android:id="@+id/imageView4"
         android:layout_width="wrap_content"
@@ -40,10 +22,9 @@
         android:layout_width="116dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="92dp"
+        android:layout_marginTop="65dp"
         android:layout_marginBottom="36dp"
         android:src="@drawable/logo_1"
-
         android:fontFamily="@font/poppins_semibold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -52,21 +33,21 @@
         app:layout_constraintVertical_bias="1.0" />
 
     <TextView
-        android:id="@+id/tnctext"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="30dp"
-        android:text="Terms And Conditions"
+        android:id="@+id/usersupview"
+        android:layout_width="334dp"
+        android:layout_height="540dp"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:justificationMode="inter_word"
+        android:text="1. Every help and contributions are suggested to be sent to Aid.id to ease the confirmation.
+        We will distribute the donation 100%, and users can check to the institute for certainty.\n\n2. Every items donated must be appropriate with the details given. \n\n3. Here, there are transparancy that allows you to check the item’s distribution and confirmation. \n\n4. Any unsuitable items may be returned or  used depends on the institue decision.\n\n5.  The rewards and appreciations can be excanged by collecting points from your total donations."
         android:textAlignment="gravity"
-        android:textColor="@color/colorInput"
-        android:textSize="50px"
+        android:textColor="@color/colorPrimary"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/imageView5"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.474"
+        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView5"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
-    />
+        app:layout_constraintVertical_bias="0.0" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

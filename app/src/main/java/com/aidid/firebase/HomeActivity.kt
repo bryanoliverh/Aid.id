@@ -43,7 +43,8 @@ class HomeActivity : AppCompatActivity() {
         {
 
             when(item.itemId)
-           {R.id.logout->{
+           {
+               R.id.logout->{
                auth.signOut()
                Intent(this@HomeActivity, LoginActivity::class.java).also {
                    it.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
