@@ -11,6 +11,7 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_home.*
+import kotlinx.android.synthetic.main.activity_settings.*
 
 class HomeActivity : AppCompatActivity() {
     private lateinit var auth: FirebaseAuth
@@ -31,7 +32,22 @@ class HomeActivity : AppCompatActivity() {
 
         val fragment1 = HomeFragment()
         supportFragmentManager.beginTransaction().replace(R.id.nav_host_fragment, fragment1)
+
+
+
     }
+    override fun onStart() {
+        super.onStart()
+        if (auth.currentUser != null){
+            tesbutton.setOnClickListener {
+                var intent = Intent(this@HomeActivity, MainSelectItem::class.java).also { intent ->
+
+                intent.flags =
+                    Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+                startActivity(intent)
+            }
+        }
+    }}
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean
     {

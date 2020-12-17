@@ -34,21 +34,19 @@
     app:layout_constraintHorizontal_bias="0.0"
     app:layout_constraintStart_toStartOf="parent" />
 
-<ImageView
-    android:id="@+id/imageView5"
-    android:layout_width="116dp"
-    android:layout_height="wrap_content"
-    android:layout_gravity="center"
-    android:layout_marginTop="92dp"
-    android:layout_marginBottom="36dp"
-    android:src="@drawable/logo_1"
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="116dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="124dp"
+        android:fontFamily="@font/poppins_semibold"
 
-    android:fontFamily="@font/poppins_semibold"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintHorizontal_bias="0.498"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toTopOf="parent"
-    app:layout_constraintVertical_bias="1.0" />
+        android:src="@drawable/logo_1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.515"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
 
@@ -68,5 +66,16 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView5"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0" />
+
+    <ImageView
+        android:id="@+id/icbacksetusersup"
+        android:layout_width="70dp"
+        android:layout_height="42dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView4"
+        app:layout_constraintEnd_toStartOf="@+id/imageView5"
+        app:layout_constraintHorizontal_bias="0.205"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tnctext"
+        app:srcCompat="@drawable/ic_back" />
     />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,16 +1,10 @@
 package com.aidid.firebase
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_settings.*
-import android.view.Menu
-import android.view.MenuItem
-import androidx.navigation.findNavController
-import androidx.navigation.ui.AppBarConfiguration
-import androidx.navigation.ui.setupActionBarWithNavController
-import androidx.navigation.ui.setupWithNavController
-import com.google.firebase.auth.FirebaseAuth
+
 class SettingsActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -35,4 +29,23 @@ class SettingsActivity : AppCompatActivity() {
             var intent = Intent(this@SettingsActivity, NotificationsActivity::class.java)
             startActivity(intent)
         }
-    }}
+        icbackset.setOnClickListener {
+
+                onBackPressed()
+
+        }
+
+
+
+
+
+            }
+    override fun onBackPressed() {
+        icbackset.setOnClickListener {
+            val intent = Intent(this, HomeActivity::class.java)
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+            startActivity(intent)
+            finish()
+        }
+    }
+    }

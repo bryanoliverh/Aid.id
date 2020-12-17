@@ -86,5 +86,16 @@
         app:cornerRadius="50dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etabout" />/>
+        app:layout_constraintTop_toBottomOf="@+id/etabout" />
+
+    <ImageView
+        android:id="@+id/icbackset"
+        android:layout_width="70dp"
+        android:layout_height="42dp"
+        android:layout_marginBottom="232dp"
+        app:layout_constraintBottom_toBottomOf="@+id/etNotifications"
+        app:layout_constraintEnd_toStartOf="@+id/imageView"
+        app:layout_constraintHorizontal_bias="0.205"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/ic_back" />/>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -67,5 +67,16 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView5"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0" />
+
+    <ImageView
+        android:id="@+id/icbacksetaboutus"
+        android:layout_width="70dp"
+        android:layout_height="42dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView4"
+        app:layout_constraintEnd_toStartOf="@+id/imageView5"
+        app:layout_constraintHorizontal_bias="0.205"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tnctext"
+        app:srcCompat="@drawable/ic_back" />
     />
 </androidx.constraintlayout.widget.ConstraintLayout>
