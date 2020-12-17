@@ -26,20 +26,14 @@ import java.io.ByteArrayOutputStream
 
 
 class ProfileFragment : Fragment() {
-
     companion object {
         const val REQUEST_CAMERA = 100
     }
 
     private lateinit var imageUri: Uri
-
     private lateinit var auth: FirebaseAuth
 
-
-    override fun onCreateView(
-            inflater: LayoutInflater, container: ViewGroup?,
-            savedInstanceState: Bundle?
-    ): View? {
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_profile1, container, false)
     }
@@ -51,7 +45,6 @@ class ProfileFragment : Fragment() {
         if (user != null) {
             if (user.photoUrl != null) {
                 Picasso.get().load(user.photoUrl).into(ivProfile1)
-
             } else {
                 Picasso.get().load("https://picsum.photos/316/200").into(ivProfile1)
             }
@@ -64,8 +57,7 @@ class ProfileFragment : Fragment() {
                 icUnverified.visibility = View.VISIBLE
             }
             if (user.phoneNumber.isNullOrEmpty()) {
-                etPhone.setText("Please Insert Your Phone Number")
-
+                etPhone.setText(user.phoneNumber)
             } else {
                 etPhone.setText(user.phoneNumber)
             }
@@ -183,5 +175,3 @@ class ProfileFragment : Fragment() {
                 }
     }
 }
-
-
