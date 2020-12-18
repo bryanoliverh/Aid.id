@@ -11,7 +11,7 @@ class ThankyouafterDonate : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_thankyouafter_donate)
         btn_backhome.setOnClickListener {
-            val intent = Intent(this@ThankyouafterDonate, HomeActivity::class.java)
+            val intent = Intent(this@ThankyouafterDonate, NewHomeActivity::class.java)
             startActivity(intent)
         }
     }

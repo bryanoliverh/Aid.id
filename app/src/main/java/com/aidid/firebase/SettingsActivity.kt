@@ -18,6 +18,12 @@ class SettingsActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        etProfButSet.setOnClickListener {
+            var intent = Intent(this@SettingsActivity, HomeFragment::class.java)
+            startActivity(intent)
+        }
+
+
         etTNC.setOnClickListener {
             var intent = Intent(this@SettingsActivity, TncActivity::class.java)
             startActivity(intent)

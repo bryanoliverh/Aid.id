@@ -5,6 +5,9 @@
         android:id="@+id/settings"
         android:title="Settings" />
     <item
+        android:id="@+id/Profileopt"
+        android:title="Profile" />
+    <item
         android:id="@+id/logout"
         android:title="Logout" />
 
