@@ -8,20 +8,17 @@
 
     <TextView
         android:id="@+id/usersupview"
-        android:layout_width="334dp"
-        android:layout_height="540dp"
-        android:layout_marginTop="20dp"
+        android:layout_width="338dp"
+        android:layout_height="455dp"
+        android:layout_marginTop="95dp"
         android:fontFamily="@font/poppins_semibold"
-
-        android:text="  Aid.id is a platform that makes it easy for all legal agencies such as hospitals, orphanages, community fundraisers, and other legal agencies to communicate their limitations. This platform can inform the needs and requirements that are still very much needed and have not been met.     Here each application user can see the necessary items that the agency still needs, such as difficulties in obtaining clothes for orphanages amid this pandemic, lack of PPE for hospitals, etc. The application also displays each needs' specifics so that donors can see the deadline for these items to be needed, completeness of needs, and the number of donations. This application is devoted to donating goods and needs, this is so that the measurement is clearer, and the results of donations are not used for other purposes that are not as needed. Application users can also get rewards associated with vouchers and collaboration with other parties if they achieve certain goals and milestones as a sign of gratitude. "
+        android:text="@string/AboutUsText"
         android:textAlignment="gravity"
         android:textColor="@color/colorPrimary"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView5"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/tnctext" />
 
     <ImageView
         android:id="@+id/imageView4"
@@ -34,37 +31,20 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <ImageView
-        android:id="@+id/imageView5"
-        android:layout_width="116dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="92dp"
-        android:layout_marginBottom="36dp"
-        android:src="@drawable/logo_1"
-
-        android:fontFamily="@font/poppins_semibold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
-
     <TextView
         android:id="@+id/tnctext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="30dp"
         android:text="About Us"
-        android:textSize="50px"
+        android:layout_marginTop="45dp"
         android:textAlignment="gravity"
         android:textColor="@color/colorInput"
+        android:textSize="50px"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/imageView5"
+        app:layout_constraintBottom_toTopOf="@+id/usersupview"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.474"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView5"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0" />
 
@@ -73,10 +53,10 @@
         android:layout_width="70dp"
         android:layout_height="42dp"
         app:layout_constraintBottom_toBottomOf="@+id/imageView4"
-        app:layout_constraintEnd_toStartOf="@+id/imageView5"
-        app:layout_constraintHorizontal_bias="0.205"
+        app:layout_constraintEnd_toStartOf="@+id/tnctext"
+        app:layout_constraintHorizontal_bias="0.350"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tnctext"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.320"
         app:srcCompat="@drawable/ic_back" />
-    />
 </androidx.constraintlayout.widget.ConstraintLayout>
