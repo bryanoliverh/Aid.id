@@ -10,7 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.aidid"
         android:usesCleartextTraffic="true">
-        <activity android:name=".ThankyouafterDonate"></activity>
+        <activity android:name=".SymptomsActivity"/>
+        <activity android:name=".PreCautionActivity"/>
+        <activity android:name=".NewHomeActivity" />
+        <activity android:name=".ThankyouafterDonate" />
         <activity android:name=".UsersupportActivity" />
         <activity android:name=".MainSelectItem" />
         <activity android:name=".TncActivity" />

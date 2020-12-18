@@ -24,7 +24,7 @@ class GetStarted : AppCompatActivity() {
     override fun onStart() {
         super.onStart()
         if (auth.currentUser != null){
-            Intent(this@GetStarted, HomeActivity::class.java).also { intent ->
+            Intent(this@GetStarted, NewHomeActivity::class.java).also { intent ->
 
                 intent.flags =
                     Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK

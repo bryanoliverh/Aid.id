@@ -8,8 +8,6 @@ import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_login.*
 
-
-
 class LoginActivity : AppCompatActivity() {
     private lateinit var auth: FirebaseAuth
 
@@ -56,7 +54,7 @@ class LoginActivity : AppCompatActivity() {
         auth.signInWithEmailAndPassword(email, password)
             .addOnCompleteListener(this) {
                 if (it.isSuccessful) {
-                    Intent(this@LoginActivity, HomeActivity::class.java).also { intent ->
+                    Intent(this@LoginActivity, NewHomeActivity::class.java).also { intent ->
 
                         intent.flags =
                             Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
@@ -71,7 +69,7 @@ class LoginActivity : AppCompatActivity() {
     override fun onStart() {
         super.onStart()
             if (auth.currentUser != null){
-                Intent(this@LoginActivity, HomeActivity::class.java).also { intent ->
+                Intent(this@LoginActivity, NewHomeActivity::class.java).also { intent ->
 
                     intent.flags =
                         Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
