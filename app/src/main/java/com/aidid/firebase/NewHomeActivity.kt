@@ -99,7 +99,7 @@ class NewHomeActivity : AppCompatActivity() {
     }
 
     fun getGlobalData(){
-        val url:String ="https://disease.sh/v3/covid-19/all"
+        val url:String ="https://corona.lmao.ninja/v3/covid-19/countries/indonesia"
 
         val stringRequest = StringRequest(
             Request.Method.GET,
