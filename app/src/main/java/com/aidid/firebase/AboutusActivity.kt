@@ -12,15 +12,6 @@ class AboutusActivity : AppCompatActivity() {
         setContentView(R.layout.activity_aboutus)
 
         icbacksetaboutus.setOnClickListener {
-
-            onBackPressed()
-
-        }
-
-    }
-
-    override fun onBackPressed() {
-        icbackset.setOnClickListener {
             val intent = Intent(this, SettingsActivity::class.java)
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
             startActivity(intent)

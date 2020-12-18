@@ -17,35 +17,34 @@ class SettingsActivity : AppCompatActivity() {
             var intent = Intent(this@SettingsActivity, UsersupportActivity::class.java)
             startActivity(intent)
         }
+
         etTNC.setOnClickListener {
             var intent = Intent(this@SettingsActivity, TncActivity::class.java)
             startActivity(intent)
         }
+
         etabout.setOnClickListener {
             var intent = Intent(this@SettingsActivity, AboutusActivity::class.java)
             startActivity(intent)
         }
+
         etNotifications.setOnClickListener {
             var intent = Intent(this@SettingsActivity, NotificationsActivity::class.java)
             startActivity(intent)
         }
+
         icbackset.setOnClickListener {
-
-                onBackPressed()
-
+            onBackPressed()
         }
 
+    }
 
-
-
-
-            }
     override fun onBackPressed() {
         icbackset.setOnClickListener {
-            val intent = Intent(this, HomeActivity::class.java)
+            val intent = Intent(this, NewHomeActivity::class.java)
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
             startActivity(intent)
             finish()
         }
     }
-    }
+}

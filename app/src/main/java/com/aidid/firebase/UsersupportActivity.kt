@@ -11,17 +11,9 @@ class UsersupportActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_usersupport)
+
         icbacksetusersup.setOnClickListener {
-
-            onBackPressed()
-
-        }
-
-    }
-
-    override fun onBackPressed() {
-        icbackset.setOnClickListener {
-            val intent = Intent(this, SettingsActivity::class.java)
+            val intent = Intent(this@UsersupportActivity, SettingsActivity::class.java)
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
             startActivity(intent)
             finish()

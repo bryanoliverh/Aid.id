@@ -11,16 +11,8 @@ class TncActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_tnc)
+
         icbacksettnc.setOnClickListener {
-
-            onBackPressed()
-
-        }
-
-    }
-
-    override fun onBackPressed() {
-        icbackset.setOnClickListener {
             val intent = Intent(this, SettingsActivity::class.java)
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
             startActivity(intent)
