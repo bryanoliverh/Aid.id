@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -10,7 +11,9 @@
         android:id="@+id/usersupview"
         android:layout_width="338dp"
         android:layout_height="455dp"
-        android:layout_marginTop="95dp"
+        android:layout_below="@+id/tnctext"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="78dp"
         android:fontFamily="@font/poppins_semibold"
         android:text="@string/AboutUsText"
         android:textAlignment="gravity"
@@ -35,8 +38,10 @@
         android:id="@+id/tnctext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="About Us"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
         android:layout_marginTop="45dp"
+        android:text="About Us"
         android:textAlignment="gravity"
         android:textColor="@color/colorInput"
         android:textSize="50px"
@@ -52,6 +57,10 @@
         android:id="@+id/icbacksetaboutus"
         android:layout_width="70dp"
         android:layout_height="42dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="29dp"
+        android:layout_marginTop="38dp"
         app:layout_constraintBottom_toBottomOf="@+id/imageView4"
         app:layout_constraintEnd_toStartOf="@+id/tnctext"
         app:layout_constraintHorizontal_bias="0.350"
@@ -59,4 +68,4 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.320"
         app:srcCompat="@drawable/ic_back" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>
