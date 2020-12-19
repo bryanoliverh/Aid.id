@@ -42,7 +42,7 @@ class UsersupportActivity : AppCompatActivity() {
                 }
             }
             private fun getData() {
-                email = editTextMail.text.toString()
+                email = editTextMail.urls.toString()
                 subject = editTextSubject.text.toString()
                 message = editTextMessage.text.toString()
             }

@@ -81,21 +81,28 @@ class NewHomeActivity : AppCompatActivity() {
             R.id.logout->{
                 auth.signOut()
                 Intent(this@NewHomeActivity, LoginActivity::class.java).also {
-                    it.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+                    it.flags = Intent.FLAG_ACTIVITY_MULTIPLE_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
                     startActivity(it)
                 }
                 return true
             }
             R.id.settings-> {
                 Intent(this@NewHomeActivity, SettingsActivity::class.java).also {
-                    it.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+                    it.flags = Intent.FLAG_ACTIVITY_MULTIPLE_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
                     startActivity(it)
                 }
                 return true
             }
             R.id.Profileopt-> {
-                Intent(this@NewHomeActivity, ProfileFragment::class.java).also {
-                    it.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+                Intent(this@NewHomeActivity, HomeActivity::class.java).also {
+                    it.flags = Intent.FLAG_ACTIVITY_MULTIPLE_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+                    startActivity(it)
+                }
+                return true
+            }
+            R.id.Reward-> {
+                Intent(this@NewHomeActivity, RewardsActivity::class.java).also {
+                    it.flags = Intent.FLAG_ACTIVITY_MULTIPLE_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
                     startActivity(it)
                 }
                 return true

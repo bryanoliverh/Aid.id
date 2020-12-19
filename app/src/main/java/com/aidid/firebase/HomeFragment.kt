@@ -25,15 +25,6 @@ class HomeFragment : Fragment() {
         savedInstanceState: Bundle? ): View? {
 
         val v: View = inflater.inflate(R.layout.fragment_home, container, false)
-        val btn1 = v.findViewById<View>(R.id.buttonhospital) as ImageButton
-
-        btn1.setOnClickListener {
-            val fragment = HospitalFragment()
-            val fragmentManager =  requireActivity().supportFragmentManager
-            val transaction = fragmentManager.beginTransaction()
-            transaction.replace(R.id.nav_host_fragment, fragment)
-            transaction.commit()
-        }
         return v
     }
 

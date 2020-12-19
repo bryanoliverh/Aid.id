@@ -6,9 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".SettingsActivity">
 
-
-
-
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="wrap_content"
@@ -25,13 +22,13 @@
         android:layout_width="116dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginBottom="36dp"
         android:src="@drawable/logo_1"
         app:layout_constraintBottom_toTopOf="@+id/etProfButSet"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.746" />
 
     <Button
         android:id="@+id/etNotifications"
@@ -51,7 +48,7 @@
         android:id="@+id/etProfButSet"
         android:layout_width="289dp"
         android:layout_height="68dp"
-        android:layout_marginTop="200dp"
+        android:layout_marginTop="180dp"
         android:text="User Profile"
         android:textColor="@color/black"
         android:textSize="18sp"
@@ -102,15 +99,4 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etabout" />
-
-    <ImageView
-        android:id="@+id/icbackset"
-        android:layout_width="70dp"
-        android:layout_height="42dp"
-        android:layout_marginBottom="104dp"
-        app:layout_constraintBottom_toBottomOf="@+id/etProfButSet"
-        app:layout_constraintEnd_toStartOf="@+id/imageView"
-        app:layout_constraintHorizontal_bias="0.205"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/ic_back" />/>
 </androidx.constraintlayout.widget.ConstraintLayout>

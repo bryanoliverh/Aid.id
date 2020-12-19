@@ -16,76 +16,14 @@ import kotlinx.android.synthetic.main.activity_settings.*
 class HomeActivity : AppCompatActivity() {
     private lateinit var auth: FirebaseAuth
 
-    override fun onCreate(savedInstanceState: Bundle?)
-    {
+    override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
         setSupportActionBar(toolbar)
         auth = FirebaseAuth.getInstance()
-        val navController = findNavController(R.id.nav_host_fragment)
-        val appBarConfiguration = AppBarConfiguration.Builder(
-            R.id.nav_home, R.id.nav_Profile
-        )
-            .build()
-        setupActionBarWithNavController(navController, appBarConfiguration)
-        nav_bottom.setupWithNavController(navController)
 
-        val fragment1 = HomeFragment()
-        supportFragmentManager.beginTransaction().replace(R.id.nav_host_fragment, fragment1)
-
-
-
+        val fragment2 = ProfileFragment()
+        supportFragmentManager.beginTransaction().replace(R.id.nav_host_fragment, fragment2)
     }
-    override fun onStart() {
-        super.onStart()
-        if (auth.currentUser != null){
-            tesbutton.setOnClickListener {
-                var intent = Intent(this@HomeActivity, MainSelectItem::class.java).also { intent ->
-
-                intent.flags =
-                    Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
-                startActivity(intent)
-            }
-        }
-    }}
-
-    override fun onCreateOptionsMenu(menu: Menu?): Boolean
-    {
-        menuInflater.inflate(R.menu.option_menu, menu)
-            return true
-    }
-
-        override fun onOptionsItemSelected(item: MenuItem): Boolean
-        {
-
-            when(item.itemId)
-           {R.id.logout->{
-               auth.signOut()
-               Intent(this@HomeActivity, LoginActivity::class.java).also {
-                   it.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
-                   startActivity(it)
-               }
-            return true
-           }
-                R.id.settings-> {
-                    Intent(this@HomeActivity, SettingsActivity::class.java).also {
-                        it.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
-                        startActivity(it)
-                    }
-                    return true
-                }
-                R.id.Profileopt-> {
-                    Intent(this@HomeActivity, ProfileFragment::class.java).also {
-                        it.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
-                        startActivity(it)
-                    }
-                    return true
-                }
-        else -> return true
-           }
-
-        }
-
-            }
-
+}
 

@@ -9,8 +9,6 @@ class SettingsActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-
         setContentView(R.layout.activity_settings)
 
         etUserSupport.setOnClickListener {
@@ -19,10 +17,9 @@ class SettingsActivity : AppCompatActivity() {
         }
 
         etProfButSet.setOnClickListener {
-            var intent = Intent(this@SettingsActivity, HomeFragment::class.java)
+            var intent = Intent(this@SettingsActivity, HomeActivity::class.java)
             startActivity(intent)
         }
-
 
         etTNC.setOnClickListener {
             var intent = Intent(this@SettingsActivity, TncActivity::class.java)
@@ -39,18 +36,5 @@ class SettingsActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        icbackset.setOnClickListener {
-            onBackPressed()
-        }
-
-    }
-
-    override fun onBackPressed() {
-        icbackset.setOnClickListener {
-            val intent = Intent(this, NewHomeActivity::class.java)
-            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
-            startActivity(intent)
-            finish()
-        }
     }
 }
