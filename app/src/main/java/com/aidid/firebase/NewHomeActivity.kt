@@ -44,6 +44,7 @@ class NewHomeActivity : AppCompatActivity() {
         precautionsList.add(Model(R.drawable.soap,"Hand Wash","Lorem Ipsum is simply dummy text of the printing and typesetting industry."))
         precautionsList.add(Model(R.drawable.hone,"Stay Home","Lorem Ipsum is simply dummy text of the printing and typesetting industry."))
         precautionsList.add(Model(R.drawable.distance,"Social Distance","Lorem Ipsum is simply dummy text of the printing and typesetting industry."))
+        precautionsList.add(Model(R.drawable.clean,"Stay Clean","Lorem Ipsum is simply dummy text of the printing and typesetting industry."))
 
         val precautionsAdapter = PreCautionsAdapter(precautionsList)
 
