@@ -92,7 +92,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/poppins_bold"
-                                android:text="4621684"
+                                android:text="0"
                                 android:textAlignment="center"
                                 android:textColor="@color/red"
                                 android:textSize="20sp" />
@@ -137,7 +137,7 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:fontFamily="@font/poppins_bold"
-                                    android:text="2356"
+                                    android:text="0"
                                     android:textAlignment="center"
                                     android:textColor="@color/green"
                                     android:textSize="20sp" />
@@ -177,7 +177,7 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:fontFamily="@font/poppins_bold"
-                                    android:text="4621"
+                                    android:text="0"
                                     android:textAlignment="center"
                                     android:textColor="@color/gray"
                                     android:textSize="20sp" />
