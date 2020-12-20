@@ -9,8 +9,8 @@ import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.aidid.firebase.R
 
-class RewardsAdapter (private var titles: List<String>, private var details: List<String>, private var images: List<Int>) :
-    RecyclerView.Adapter<RewardsAdapter.ViewHolder>(){
+class RewardAdapter (private var titles: List<String>, private var details: List<String>, private var images: List<Int>) :
+    RecyclerView.Adapter<RewardAdapter.ViewHolder>(){
 
     inner class ViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
 

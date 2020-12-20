@@ -65,6 +65,15 @@ class NewHomeActivity : AppCompatActivity() {
                 startActivity(intent)
         }
 
+        hospitalbutton.setOnClickListener{
+            var intent = Intent(this@NewHomeActivity, HospitalActivity::class.java)
+                startActivity(intent)
+        }
+
+        orphanbutton.setOnClickListener{
+            var intent = Intent(this@NewHomeActivity, OrphanActivity::class.java)
+            startActivity(intent)
+        }
         getGlobalData()
     }
 

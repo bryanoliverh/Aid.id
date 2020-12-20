@@ -25,12 +25,6 @@ class UsersupportActivity : AppCompatActivity() {
                 editTextSubject = findViewById(R.id.editTextSubject)
                 editTextMessage = findViewById(R.id.editTextMessage)
                 buttonSend = findViewById(R.id.buttonSend)
-                icbacksetusersup.setOnClickListener {
-                    val intent = Intent(this@UsersupportActivity, SettingsActivity::class.java)
-                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
-                    startActivity(intent)
-                    finish()
-                }
                 buttonSend.setOnClickListener {
                     getData()
                     val intent = Intent(Intent.ACTION_SEND)

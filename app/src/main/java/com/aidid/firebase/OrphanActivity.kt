@@ -4,9 +4,9 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.aidid.firebase.selectitem.adapters.RewardAdapter
-import kotlinx.android.synthetic.main.activity_rewards.*
+import kotlinx.android.synthetic.main.activity_orphan.*
 
-class RewardsActivity : AppCompatActivity() {
+class OrphanActivity : AppCompatActivity() {
 
     private var titlesList = mutableListOf<String>()
     private var descList = mutableListOf<String>()
@@ -14,12 +14,12 @@ class RewardsActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_rewards)
+        setContentView(R.layout.activity_orphan)
 
         postToList()
 
-        rv_recyclerView.layoutManager = LinearLayoutManager(this)
-        rv_recyclerView.adapter = RewardAdapter(titlesList, descList, imagesList)
+        orphanrecycler.layoutManager = LinearLayoutManager(this)
+        orphanrecycler.adapter = RewardAdapter(titlesList, descList, imagesList)
 
     }
     private fun addToList(title: String, description: String, image: Int) {

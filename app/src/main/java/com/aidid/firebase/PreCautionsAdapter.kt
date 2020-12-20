@@ -23,9 +23,9 @@ class PreCautionsAdapter(var precautionsList: ArrayList<Model>):RecyclerView.Ada
     }
 
     class ViewHolder(inflater: LayoutInflater,viewGroup: ViewGroup):
-        RecyclerView.ViewHolder(inflater.inflate(R.layout.item_symptoms,viewGroup,false)){
+        RecyclerView.ViewHolder(inflater.inflate(R.layout.item_symptoms,viewGroup,false)) {
 
-        fun bind(precautionsModel: Model){
+        fun bind(precautionsModel: Model) {
             val symptomsText = itemView.findViewById<TextView>(R.id.txtSymptoms)
             val symptomsTextDetail = itemView.findViewById<TextView>(R.id.txtSymptomsDetail)
             val imageView = itemView.findViewById<ImageView>(R.id.imageView)
@@ -33,9 +33,5 @@ class PreCautionsAdapter(var precautionsList: ArrayList<Model>):RecyclerView.Ada
             symptomsText.text = precautionsModel.symptomsText
             symptomsTextDetail.text = precautionsModel.symptomsDetail
         }
-
     }
-
-
-
 }

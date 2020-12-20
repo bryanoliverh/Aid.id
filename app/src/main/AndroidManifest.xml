@@ -10,7 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.aidid"
         android:usesCleartextTraffic="true">
-        <activity android:name=".RewardsActivity"/>
+        <activity android:name=".OrphanActivity"></activity>
+        <activity android:name=".HospitalActivity" />
+        <activity android:name=".RewardsActivity" />
         <activity android:name=".SymptomsActivity" />
         <activity android:name=".PreCautionActivity" />
         <activity android:name=".NewHomeActivity" />
