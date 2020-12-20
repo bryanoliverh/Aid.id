@@ -40,17 +40,12 @@
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rv_recyclerView"
             android:layout_width="match_parent"
-            android:layout_height="675dp"
+            android:layout_height="700dp"
             android:layout_alignParentBottom="true"
             android:layout_marginTop="45dp"
             android:layout_marginBottom="10dp"
             tools:itemCount="17"
             tools:listitem="@layout/item_layout" />
-
-
-
-
-
 
     </RelativeLayout>
 </ScrollView>
