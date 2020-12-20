@@ -29,8 +29,17 @@ class RewardsActivity : AppCompatActivity() {
     }
 
     private fun postToList() {
-        for (i in 1..25) {
-            addToList("Title $i", "Description $i", R.mipmap.ic_launcher_round)
-        }
+        addToList("10% Starbucks Gift Coupon","Lorem Ipsum is simply dummy text of the printing and typesetting industry.", R.drawable.map_logo)
+        addToList("20% Starbucks Gift Coupon","Lorem Ipsum is simply dummy text of the printing and typesetting industry.", R.drawable.map_logo)
+        addToList("30% Starbucks Gift Coupon","Lorem Ipsum is simply dummy text of the printing and typesetting industry.", R.drawable.map_logo)
+        addToList("40% Starbucks Gift Coupon","Lorem Ipsum is simply dummy text of the printing and typesetting industry.", R.drawable.map_logo)
+        addToList("10% Zara Gift Coupon","Lorem Ipsum is simply dummy text of the printing and typesetting industry.", R.drawable.map_logo)
+        addToList("10% Domino's Gift Coupon","Lorem Ipsum is simply dummy text of the printing and typesetting industry.", R.drawable.map_logo)
+        addToList("10% Planet Sports Gift Coupon","Lorem Ipsum is simply dummy text of the printing and typesetting industry.", R.drawable.map_logo)
+        addToList("10% Topman Gift Coupon","Lorem Ipsum is simply dummy text of the printing and typesetting industry.", R.drawable.map_logo)
+        addToList("10% Lacoste Gift Coupon","Lorem Ipsum is simply dummy text of the printing and typesetting industry.", R.drawable.map_logo)
+
+//            addToList("Title $i", "Description $i", R.mipmap.ic_launcher_round)
+//        }
     }
 }
