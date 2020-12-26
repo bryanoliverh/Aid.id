@@ -128,23 +128,23 @@ class NewHomeActivity : AppCompatActivity() {
         val stringRequest = StringRequest(
             Request.Method.GET,
             url,
-            Response.Listener<String> {
+                {
 
-                var jsonObject = JSONObject(it.toString())
+                    var jsonObject = JSONObject(it.toString())
 
-                //now set values in textview
-                txtInfected.text = jsonObject.getString("cases")
-                txtRecoverd.text = jsonObject.getString("recovered")
-                txtDeceased.text = jsonObject.getString("deaths")
+                    //now set values in textview
+                    txtInfected.text = jsonObject.getString("cases")
+                    txtRecoverd.text = jsonObject.getString("recovered")
+                    txtDeceased.text = jsonObject.getString("deaths")
 
-            },
-            Response.ErrorListener {
-                Toast.makeText(this@NewHomeActivity,it.toString(), Toast.LENGTH_LONG).show()
-                txtInfected.text = "-"
-                txtRecoverd.text = "-"
-                txtDeceased.text = "-"
+                },
+                {
+                    Toast.makeText(this@NewHomeActivity,it.toString(), Toast.LENGTH_LONG).show()
+                    txtInfected.text = "-"
+                    txtRecoverd.text = "-"
+                    txtDeceased.text = "-"
 
-            }
+                }
         )
 
         val requestQueue = Volley.newRequestQueue(this@NewHomeActivity)

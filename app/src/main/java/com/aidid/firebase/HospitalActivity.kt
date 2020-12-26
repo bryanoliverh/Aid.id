@@ -1,9 +1,14 @@
 package com.aidid.firebase
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
+import android.widget.AdapterView
 import android.widget.LinearLayout
+import android.widget.ListView
+import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.aidid.firebase.selectitem.adapters.NewAdapter
 import com.aidid.firebase.selectitem.models.NewModel
@@ -15,26 +20,35 @@ class HospitalActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_hospital2)
 
-        hospitalrecycler.layoutManager = LinearLayoutManager(this, LinearLayout.VERTICAL,false)
-        val newList = ArrayList<NewModel>()
-        newList.add(NewModel("Title1", "Lorem Ipsum Dolor Domet", R.drawable.clean))
-        newList.add(NewModel("Title2", "Lorem Ipsum Dolor Domet", R.drawable.clean))
-        newList.add(NewModel("Title3", "Lorem Ipsum Dolor Domet", R.drawable.clean))
-        newList.add(NewModel("Title4", "Lorem Ipsum Dolor Domet", R.drawable.clean))
-        newList.add(NewModel("Title5", "Lorem Ipsum Dolor Domet", R.drawable.clean))
-        newList.add(NewModel("Title6", "Lorem Ipsum Dolor Domet", R.drawable.clean))
-        newList.add(NewModel("Title7", "Lorem Ipsum Dolor Domet", R.drawable.clean))
-        newList.add(NewModel("Title8", "Lorem Ipsum Dolor Domet", R.drawable.clean))
-        newList.add(NewModel("Title9", "Lorem Ipsum Dolor Domet", R.drawable.clean))
-        newList.add(NewModel("Title10", "Lorem Ipsum Dolor Domet", R.drawable.clean))
-        newList.add(NewModel("Title11", "Lorem Ipsum Dolor Domet", R.drawable.clean))
-        newList.add(NewModel("Title12", "Lorem Ipsum Dolor Domet", R.drawable.clean))
-        newList.add(NewModel("Title113", "Lorem Ipsum Dolor Domet", R.drawable.clean))
-        newList.add(NewModel("Title14", "Lorem Ipsum Dolor Domet", R.drawable.clean))
-        newList.add(NewModel("Title15", "Lorem Ipsum Dolor Domet", R.drawable.clean))
-        newList.add(NewModel("Title16", "Lorem Ipsum Dolor Domet", R.drawable.cough))
+        var listview = findViewById<ListView>(R.id.hospitalview)
+        var list = mutableListOf<NewModel>()
 
-        val symptomsAdapter = NewAdapter(newList)
-        hospitalrecycler.adapter = symptomsAdapter
+        list.add(NewModel("RS Universitas Indonesia", "Pondok Cina, Kecamatan Beji, Kota Depok, Jawa Barat 16424", "+622150829292", R.drawable.rsui))
+        list.add(NewModel("RSU Bunda Margonda", "Jl. Margonda Raya No.28, Pondok Cina, Kecamatan Beji, Kota Depok, Jawa Barat 16424", "+621500799",R.drawable.rsubundamargonda))
+        list.add(NewModel("RS Grha Permata Ibu", "Jl. K.H.M. Usman No.168, Kukusan, Kecamatan Beji, Kota Depok, Jawa Barat 16425", "+62217778899",R.drawable.rsgrhapermataibu))
+        list.add(NewModel("RS Citra Arafiq", "Jl. Perindustrian No.53, Bakti Jaya, Kec. Sukmajaya, Kota Depok, Jawa Barat 16418", "+622122821911",R.drawable.rscitraarafiq))
+        list.add(NewModel("RS Universitas Hasanuddin", "Jl. Perintis Kemerdekaan No.KM 10, Tamalanrea Indah, Kec. Tamalanrea, Kota Makassar, Sulawesi Selatan 90245", "+62411591331",R.drawable.rshasanuddin))
+        list.add(NewModel("RSUP Fatmawati", "Jl. RS. Fatmawati Raya No.4, RT.4/RW.9, Cilandak Bar., Kec. Cilandak, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12430", "+62217501524",R.drawable.rsupfatmawati))
+
+        listview.adapter = NewAdapter(this, R.layout.row, list)
+
+        listview.setOnItemClickListener { parent:AdapterView<*>, view:View, position:Int, id:Long ->
+            if (position == 0){
+                var intent = Intent(this@HospitalActivity,SymptomsActivity::class.java)
+                startActivity(intent)
+            }
+            if (position == 1){
+                Toast.makeText(this@HospitalActivity, "You Click on 2", Toast.LENGTH_LONG).show()
+            }
+            if (position == 2){
+                Toast.makeText(this@HospitalActivity, "You Click on 3", Toast.LENGTH_LONG).show()
+            }
+            if (position == 3){
+                Toast.makeText(this@HospitalActivity, "You Click on 4", Toast.LENGTH_LONG).show()
+            }
+            if (position == 4){
+                Toast.makeText(this@HospitalActivity, "You Click on 5", Toast.LENGTH_LONG).show()
+            }
+        }
     }
 }

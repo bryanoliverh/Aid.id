@@ -1,39 +1,31 @@
 package com.aidid.firebase.selectitem.adapters
 
+import android.content.Context
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
+import android.widget.ArrayAdapter
 import android.widget.ImageView
 import android.widget.TextView
-import androidx.recyclerview.widget.RecyclerView
 import com.aidid.firebase.R
 import com.aidid.firebase.selectitem.models.NewModel
 
-class NewAdapter(var Newlist: ArrayList<NewModel>):RecyclerView.Adapter<NewAdapter.ViewHolder>() {
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NewAdapter.ViewHolder {
+class NewAdapter(var mCtx: Context, var resource:Int, var items: List<NewModel>):ArrayAdapter<NewModel> (mCtx, resource, items) {
+    override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
+        val layoutInflater:LayoutInflater = LayoutInflater.from(mCtx)
+        val view:View = layoutInflater.inflate(resource, null)
 
-        val inflater = LayoutInflater.from(parent.context)
-        return ViewHolder(inflater,parent)
-    }
+        val imageView:ImageView = view.findViewById(R.id.image123)
+        val titleTextView:TextView = view.findViewById(R.id.text123)
+        val descriptionTextView:TextView = view.findViewById(R.id.text124)
+        val extendTextView:TextView = view.findViewById(R.id.text125)
 
-    override fun getItemCount(): Int {
-        return Newlist.size
-    }
+        var mItem:NewModel = items[position]
+        imageView.setImageDrawable(mCtx.resources.getDrawable(mItem.img))
+        titleTextView.text = mItem.title
+        descriptionTextView.text = mItem.description
+        extendTextView.text = mItem.extend
 
-    override fun onBindViewHolder(holder: NewAdapter.ViewHolder, position: Int) {
-        val symptomsModel = Newlist[position]
-        holder.bind(symptomsModel)
-    }
-
-    class ViewHolder(inflater: LayoutInflater,viewGroup: ViewGroup):
-        RecyclerView.ViewHolder(inflater.inflate(R.layout.row_items,viewGroup,false)) {
-
-        fun bind(newModel: NewModel) {
-            val symptomsText = itemView.findViewById<TextView>(R.id.textkhusus1)
-            val symptomsTextDetail = itemView.findViewById<TextView>(R.id.textkhusus2)
-            val imageView = itemView.findViewById<ImageView>(R.id.khususitem)
-            imageView.setImageResource(newModel.image)
-            symptomsText.text = newModel.name
-            symptomsTextDetail.text = newModel.desc
-        }
+        return view
     }
 }

@@ -1,5 +1,4 @@
 package com.aidid.firebase.selectitem.models
 
-class NewModel(var name: String, var desc: String, var image: Int){
-
+class NewModel(var title: String, var description: String, var extend: String, var img: Int){
 }
