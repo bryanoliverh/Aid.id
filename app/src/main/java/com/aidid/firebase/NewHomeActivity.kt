@@ -74,6 +74,15 @@ class NewHomeActivity : AppCompatActivity() {
             var intent = Intent(this@NewHomeActivity, OrphanActivity::class.java)
             startActivity(intent)
         }
+
+        antivirusbutton.setOnClickListener {
+            Toast.makeText(this@NewHomeActivity,"You clicked on item Antivirus, nothing inside here please please select another",Toast.LENGTH_SHORT).show()
+        }
+
+        schoolbutton.setOnClickListener {
+            Toast.makeText(this@NewHomeActivity, "You clicked on item School, nothing inside here please please select another",Toast.LENGTH_SHORT).show()
+        }
+
         getGlobalData()
     }
 

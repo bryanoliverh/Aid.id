@@ -42,11 +42,11 @@
         <ListView
             android:id="@+id/hospitalview"
             android:layout_width="match_parent"
-            android:layout_height="1000dp"
+            android:layout_height="900dp"
             android:layout_marginStart="2dp"
-            android:padding="5dp">
-
-        </ListView>
+            android:padding="5dp"
+            tools:itemCount="20"
+            tools:listitem="@layout/row"/>
 
     </LinearLayout>
 </ScrollView>

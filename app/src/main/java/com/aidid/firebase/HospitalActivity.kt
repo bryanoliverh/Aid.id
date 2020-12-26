@@ -6,10 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.AdapterView
-import android.widget.LinearLayout
 import android.widget.ListView
-import android.widget.Toast
-import androidx.recyclerview.widget.LinearLayoutManager
 import com.aidid.firebase.selectitem.adapters.NewAdapter
 import com.aidid.firebase.selectitem.models.NewModel
 import kotlinx.android.synthetic.main.activity_hospital2.*
@@ -34,20 +31,24 @@ class HospitalActivity : AppCompatActivity() {
 
         listview.setOnItemClickListener { parent:AdapterView<*>, view:View, position:Int, id:Long ->
             if (position == 0){
-                var intent = Intent(this@HospitalActivity,SymptomsActivity::class.java)
+                var intent = Intent(this@HospitalActivity,MainSelectItem::class.java)
                 startActivity(intent)
             }
             if (position == 1){
-                Toast.makeText(this@HospitalActivity, "You Click on 2", Toast.LENGTH_LONG).show()
+                var intent = Intent(this@HospitalActivity,MainSelectItem::class.java)
+                startActivity(intent)
             }
             if (position == 2){
-                Toast.makeText(this@HospitalActivity, "You Click on 3", Toast.LENGTH_LONG).show()
+                var intent = Intent(this@HospitalActivity,MainSelectItem::class.java)
+                startActivity(intent)
             }
             if (position == 3){
-                Toast.makeText(this@HospitalActivity, "You Click on 4", Toast.LENGTH_LONG).show()
+                var intent = Intent(this@HospitalActivity,MainSelectItem::class.java)
+                startActivity(intent)
             }
             if (position == 4){
-                Toast.makeText(this@HospitalActivity, "You Click on 5", Toast.LENGTH_LONG).show()
+                var intent = Intent(this@HospitalActivity,MainSelectItem::class.java)
+                startActivity(intent)
             }
         }
     }
