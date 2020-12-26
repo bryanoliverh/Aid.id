@@ -12,7 +12,9 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.aidid.firebase.selectitem.adapters.ProductAdapter
 import com.aidid.firebase.selectitem.adapters.SelectedProductAdapter
+import com.aidid.firebase.selectitem.models.Product
 import com.aidid.firebase.selectitem.viewmodels.ProductViewModel
+import com.google.firebase.database.FirebaseDatabase
 import kotlinx.android.synthetic.main.activity_mainselectitem.*
 import kotlinx.android.synthetic.main.bottomsheet_cart.*
 
@@ -28,9 +30,28 @@ class MainSelectItem : AppCompatActivity() {
         setupUI()
 
         btn_checkout.setOnClickListener {
-                    val intent = Intent(this@MainSelectItem,Confirmationdonation::class.java)
-                    startActivity(intent)
-                }
+            val product = Product()
+            val intent = Intent(this@MainSelectItem,Confirmationdonation::class.java)
+            startActivity(intent)
+            saveData(product)
+        }
+    }
+
+    private fun saveData(product: Product){
+        val nama = product.name
+        val item = product.points
+        val image = product.image
+        val jumlah = product.selectedQuantity
+
+        val ref = FirebaseDatabase.getInstance().getReference("Product")
+        val refid = ref.push().key
+        val mhs = Product(refid, nama, item, image)
+
+        if (refid != null) {
+            ref.child(refid).setValue(mhs).addOnCompleteListener {
+                Toast.makeText(applicationContext,"Data Oke", Toast.LENGTH_SHORT).show()
+            }
+        }
     }
 
     private fun setupUI(){
