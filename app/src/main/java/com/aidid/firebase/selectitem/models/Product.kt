@@ -5,9 +5,9 @@ import kotlinx.android.parcel.Parcelize
 
 @Parcelize
 data class Product(
-    var id: String? = null,
-    var name: String? = null,
+    var id: String? = "",
+    var name: String? = "",
     var points: Int? = null,
-    var image: String? = null,
+    var image: String? = "",
     var selectedQuantity: Int? = null
 ) : Parcelable

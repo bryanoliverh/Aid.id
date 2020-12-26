@@ -49,4 +49,4 @@
             tools:listitem="@layout/row"/>
 
     </LinearLayout>
-</ScrollView>
+</ScrollView >
