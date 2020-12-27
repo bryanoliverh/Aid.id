@@ -29,15 +29,14 @@ class RewardsActivity : AppCompatActivity() {
     }
 
     private fun postToList() {
-        addToList("10% Starbucks Gift Coupon","Lorem Ipsum is simply dummy text of the printing and typesetting industry.", R.drawable.map_logo)
-        addToList("20% Starbucks Gift Coupon","Lorem Ipsum is simply dummy text of the printing and typesetting industry.", R.drawable.map_logo)
-        addToList("30% Starbucks Gift Coupon","Lorem Ipsum is simply dummy text of the printing and typesetting industry.", R.drawable.map_logo)
-        addToList("40% Starbucks Gift Coupon","Lorem Ipsum is simply dummy text of the printing and typesetting industry.", R.drawable.map_logo)
-        addToList("10% Zara Gift Coupon","Lorem Ipsum is simply dummy text of the printing and typesetting industry.", R.drawable.map_logo)
-        addToList("10% Domino's Gift Coupon","Lorem Ipsum is simply dummy text of the printing and typesetting industry.", R.drawable.map_logo)
-        addToList("10% Planet Sports Gift Coupon","Lorem Ipsum is simply dummy text of the printing and typesetting industry.", R.drawable.map_logo)
-        addToList("10% Topman Gift Coupon","Lorem Ipsum is simply dummy text of the printing and typesetting industry.", R.drawable.map_logo)
-        addToList("10% Lacoste Gift Coupon","Lorem Ipsum is simply dummy text of the printing and typesetting industry.", R.drawable.map_logo)
+        addToList("10% Starbucks Gift Coupon","This gift coupon is worth 30 reward points.", R.drawable.sbx)
+        addToList("20% Starbucks Gift Coupon","This gift coupon is worth 50 reward points.", R.drawable.sbx)
+        addToList("30% Starbucks Gift Coupon","This gift coupon is worth 70 reward points.", R.drawable.sbx)
+        addToList("40% Starbucks Gift Coupon","This gift coupon is worth 100 reward points.", R.drawable.sbx)
+        addToList("10% Zara Gift Coupon","This gift coupon is worth 150 reward points.", R.drawable.zara)
+        addToList("10% Domino's Gift Coupon","This gift coupon is worth 30 reward points.", R.drawable.map_logo)
+        addToList("10% Topman Gift Coupon","This gift coupon is worth 150 reward points.", R.drawable.map_logo)
+        addToList("10% Lacoste Gift Coupon","This gift coupon is worth 150 reward points.", R.drawable.map_logo)
 
 //            addToList("Title $i", "Description $i", R.mipmap.ic_launcher_round)
 //        }
