@@ -31,7 +31,7 @@ class NewHomeActivity : AppCompatActivity() {
 
         recyclerView.layoutManager = LinearLayoutManager(this,LinearLayout.HORIZONTAL,false)
         val symptomsList = ArrayList<Model>()
-        symptomsList.add(Model(R.drawable.cough,"Dry Cough","Dry Cough is a reflex action that clears your airway of irritants and mucus. There are two types of cough: productive and nonproductive. A productive cough produces phlegm or mucus, clearing it from the lungs. A nonproductive cough, also known as a dry cough, doesn’t produce phlegm or mucus.."))
+        symptomsList.add(Model(R.drawable.cough,"Dry Cough","Dry Cough is a reflex action that clears your airway of irritants and mucus. There are two types of cough: productive and nonproductive. A productive cough produces phlegm or mucus, clearing it from the lungs. A nonproductive cough, also known as a dry cough, doesn’t produce phlegm or mucus."))
         symptomsList.add(Model(R.drawable.fever,"Fever","Fever is a temporary increase in your body temperature, often due to an illness. Having a fever is a sign that something out of the ordinary is going on in your body."))
         symptomsList.add(Model(R.drawable.pain,"Head Ache","Headache is the symptom of pain in the face, head, or neck. It can occur as a migraine, tension-type headache, or cluster headache."))
 
@@ -44,7 +44,6 @@ class NewHomeActivity : AppCompatActivity() {
         precautionsList.add(Model(R.drawable.soap,"Hand Wash","Wash your hands regularly. Use soap and water, or an alcohol-based hand sanitizer."))
         precautionsList.add(Model(R.drawable.hone,"Stay Home","Don't leave the house if you don't feel well."))
         precautionsList.add(Model(R.drawable.distance,"Social Distance","Always maintain a safe distance from people who are coughing or sneezing."))
-        precautionsList.add(Model(R.drawable.clean,"Clean Object & Surface","Don't touch your eyes, nose or mouth after u touching any object."))
 
         val precautionsAdapter = PreCautionsAdapter(precautionsList)
 
