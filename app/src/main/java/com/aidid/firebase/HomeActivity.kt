@@ -14,9 +14,7 @@ class HomeActivity : AppCompatActivity() {
         setContentView(R.layout.activity_home)
         setSupportActionBar(toolbar)
         auth = FirebaseAuth.getInstance()
-
-        val fragment2 = ProfileFragment()
-        supportFragmentManager.beginTransaction().replace(R.id.nav_host_fragment, fragment2)
+        val fragment1 = ProfileFragment()
+        supportFragmentManager.beginTransaction().replace(R.id.nav_host_fragment, fragment1)
     }
 }
-

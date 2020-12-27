@@ -25,7 +25,6 @@ class PreCautionActivity : AppCompatActivity() {
         precautionsList.add(Model(R.drawable.cover,"Avoid Touching","Don't touch your eyes, nose or mouth after u touching any object."))
 
         val precautionsAdapter = PreCautionsAdapter(precautionsList)
-
         recyclerView2.adapter = precautionsAdapter
     }
 }

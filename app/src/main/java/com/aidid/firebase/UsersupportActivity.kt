@@ -3,11 +3,8 @@ package com.aidid.firebase
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import kotlinx.android.synthetic.main.activity_usersupport.*
-
 import android.widget.Button
 import android.widget.EditText
-
 
 class UsersupportActivity : AppCompatActivity() {
             lateinit var editTextMail: EditText
@@ -40,8 +37,4 @@ class UsersupportActivity : AppCompatActivity() {
                 subject = editTextSubject.text.toString()
                 message = editTextMessage.text.toString()
             }
-
     }
-
-
-

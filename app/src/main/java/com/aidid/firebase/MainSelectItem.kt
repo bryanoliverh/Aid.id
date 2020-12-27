@@ -24,7 +24,6 @@ class MainSelectItem : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_mainselectitem)
         setupUI()
-
         btn_checkout.setOnClickListener {
             val intent = Intent(this@MainSelectItem,ThankyouafterDonate::class.java)
             startActivity(intent)

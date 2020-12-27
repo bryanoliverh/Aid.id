@@ -23,17 +23,15 @@ import kotlinx.android.synthetic.*
 import kotlinx.android.synthetic.main.fragment_profile1.*
 import java.io.ByteArrayOutputStream
 
-
 class ProfileFragment : Fragment() {
+    private lateinit var imageUri: Uri
+    private lateinit var auth: FirebaseAuth
+
     companion object {
         const val REQUEST_CAMERA = 100
     }
 
-    private lateinit var imageUri: Uri
-    private lateinit var auth: FirebaseAuth
-
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,savedInstanceState: Bundle?): View? {
-        // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_profile1, container, false)
     }
 
@@ -74,12 +72,10 @@ class ProfileFragment : Fragment() {
                 etName.requestFocus()
                 return@setOnClickListener
             }
-
             //user profile yang akan diupload ke firebase
             UserProfileChangeRequest.Builder()
                     .setDisplayName(name) //nama yang diimput
                     .setPhotoUri(image)//uri image yang ditentukan
-
             //foto yang disimpan hanya url saja, jadi foto bisa diupload ke  firebase storage
                     .build().also{
                         user?.updateProfile(it)?.addOnCompleteListener{
@@ -92,18 +88,15 @@ class ProfileFragment : Fragment() {
                     }
         }//ketika email belum diverifikasi muncul icon unverified
         icUnverified.setOnClickListener{
-        user?.sendEmailVerification()?.addOnCompleteListener{
-        if (it.isSuccessful){
-            Toast.makeText(activity, "Email Verfication has been Sent", Toast.LENGTH_SHORT).show()
-
-        }//jika gagal ditampilkan pesan error lewat toast
-            else{
-            Toast.makeText(activity, "${it.exception?.message}", Toast.LENGTH_SHORT).show()
-
+            user?.sendEmailVerification()?.addOnCompleteListener{
+                if (it.isSuccessful){
+                Toast.makeText(activity, "Email Verfication has been Sent", Toast.LENGTH_SHORT).show()
+                }//jika gagal ditampilkan pesan error lewat toast
+                else{
+                Toast.makeText(activity, "${it.exception?.message}", Toast.LENGTH_SHORT).show()
+                }
+            }
         }
-
-        }
-    }
         //when you click edit email it will redirect to edit email page
         etEmail.setOnClickListener{
             val actionUpdateEmail = ProfileFragmentDirections.actionUpdateEmail()
@@ -124,9 +117,7 @@ class ProfileFragment : Fragment() {
                     startActivityForResult(intent, REQUEST_CAMERA)
                 }
             }
-
         }
-
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
@@ -134,7 +125,7 @@ class ProfileFragment : Fragment() {
         if (requestCode == REQUEST_CAMERA && resultCode == RESULT_OK){
             val imgBitmap = data?.extras?.get("data") as Bitmap
             uploadImage(imgBitmap)
-    }
+        }
     }
 
     private fun uploadImage(imgBitmap: Bitmap) {
@@ -151,10 +142,8 @@ class ProfileFragment : Fragment() {
                             it.result?.let {
                                 imageUri = it
                                 ivProfile1.setImageBitmap(imgBitmap)
-
                             }
                         }
-
                     }
                 }
     }

@@ -3,11 +3,7 @@ package com.aidid.firebase
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Patterns
-import android.widget.Toast
-import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_confirmationdonation.*
-
 
 class Confirmationdonation : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -18,10 +14,9 @@ class Confirmationdonation : AppCompatActivity() {
             val intent = Intent(this@Confirmationdonation, MainSelectItem::class.java)
             startActivity(intent)
         }
-            btn_yes.setOnClickListener {
-                val intent = Intent(this@Confirmationdonation,ThankyouafterDonate::class.java)
-                startActivity(intent)
-
+        btn_yes.setOnClickListener {
+            val intent = Intent(this@Confirmationdonation,ThankyouafterDonate::class.java)
+            startActivity(intent)
+        }
     }
-}
 }

@@ -12,9 +12,7 @@ class GetStarted : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_get_started)
-
         auth = FirebaseAuth.getInstance()
-
         btnGo.setOnClickListener {
             var intent = Intent(this@GetStarted, LoginActivity::class.java)
             startActivity(intent)
@@ -25,7 +23,6 @@ class GetStarted : AppCompatActivity() {
         super.onStart()
         if (auth.currentUser != null){
             Intent(this@GetStarted, NewHomeActivity::class.java).also { intent ->
-
                 intent.flags =
                     Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
                 startActivity(intent)

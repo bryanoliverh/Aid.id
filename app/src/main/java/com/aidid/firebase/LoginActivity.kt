@@ -41,7 +41,6 @@ class LoginActivity : AppCompatActivity() {
             Intent(this@LoginActivity, RegisterActivity::class.java).also {
                 startActivity(it)
             }
-
         }
         btnForgotPassword.setOnClickListener {
             Intent(this@LoginActivity, ResetPasswordActivity::class.java).also{
@@ -55,7 +54,6 @@ class LoginActivity : AppCompatActivity() {
             .addOnCompleteListener(this) {
                 if (it.isSuccessful) {
                     Intent(this@LoginActivity, NewHomeActivity::class.java).also { intent ->
-
                         intent.flags =
                             Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
                         startActivity(intent)
@@ -70,11 +68,10 @@ class LoginActivity : AppCompatActivity() {
         super.onStart()
             if (auth.currentUser != null){
                 Intent(this@LoginActivity, NewHomeActivity::class.java).also { intent ->
-
                     intent.flags =
                         Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
                     startActivity(intent)
-        }
-        }
+                }
+            }
     }
 }

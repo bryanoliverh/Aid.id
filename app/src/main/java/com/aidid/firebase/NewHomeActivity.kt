@@ -38,7 +38,6 @@ class NewHomeActivity : AppCompatActivity() {
         symptomsList.add(Model(R.drawable.pain,"Head Ache","Headache is the symptom of pain in the face, head, or neck. It can occur as a migraine, tension-type headache, or cluster headache."))
 
         val symptomsAdapter = SymptomsAdapter(symptomsList)
-
         recyclerView.adapter = symptomsAdapter
 
         recyclerViewPrecautions.layoutManager = LinearLayoutManager(this,LinearLayout.HORIZONTAL,false)
@@ -48,7 +47,6 @@ class NewHomeActivity : AppCompatActivity() {
         precautionsList.add(Model(R.drawable.distance,"Social Distance","Always maintain a safe distance from people who are coughing or sneezing."))
 
         val precautionsAdapter = PreCautionsAdapter(precautionsList)
-
         recyclerViewPrecautions.adapter = precautionsAdapter
 
         txtViewSymptoms.setOnClickListener {
@@ -78,7 +76,6 @@ class NewHomeActivity : AppCompatActivity() {
         schoolbutton.setOnClickListener {
             Toast.makeText(this@NewHomeActivity, "You clicked on item School, nothing inside here please please select another",Toast.LENGTH_SHORT).show()
         }
-
         getGlobalData()
     }
 

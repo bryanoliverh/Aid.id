@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.aidid.firebase">
-
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -10,7 +9,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.aidid"
         android:usesCleartextTraffic="true">
-        <activity android:name=".OrphanActivity"></activity>
+        <activity android:name=".OrphanActivity"/>
         <activity android:name=".HospitalActivity" />
         <activity android:name=".RewardsActivity" />
         <activity android:name=".SymptomsActivity" />
@@ -40,5 +39,4 @@
         <activity android:name=".RegisterActivity" />
         <activity android:name=".LoginActivity" />
     </application>
-
 </manifest>

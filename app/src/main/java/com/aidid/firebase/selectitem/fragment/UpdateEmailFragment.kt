@@ -17,23 +17,17 @@ import kotlinx.android.synthetic.main.fragment_update_email.*
 import kotlinx.android.synthetic.main.fragment_update_email.etEmail
 import kotlinx.android.synthetic.main.fragment_update_email.etPassword
 
-
-
 class UpdateEmailFragment : Fragment() {
-   private lateinit var  auth :FirebaseAuth
+    private lateinit var  auth :FirebaseAuth
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
-                              savedInstanceState: Bundle?): View? {
-        // Inflate the layout for this fragment
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,savedInstanceState: Bundle?): View? {
         return inflater.inflate(R.layout.fragment_update_email, container, false)
-
     }
     override fun  onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         auth = FirebaseAuth.getInstance()
         val user = auth.currentUser
 
-        //ketika pertama dibuka yang keluar adalah layout password
         layoutPassword.visibility = View.VISIBLE
         layoutEmail.visibility = View.GONE
 
@@ -43,26 +37,21 @@ class UpdateEmailFragment : Fragment() {
                 etPassword.error = "Please Enter Your Password"
                 etPassword.requestFocus()
                 return@setOnClickListener
-
             }//!!  digunakan karena email sudah pasti ada
             user?.let {
                 val userCredential = EmailAuthProvider.getCredential(it.email!!, password)
                 it.reauthenticate(userCredential).addOnCompleteListener {
                     if (it.isSuccessful) {
-
                         layoutPassword.visibility = View.GONE
                         layoutEmail.visibility = View.VISIBLE
-
                     } else if (it.exception is FirebaseAuthInvalidCredentialsException) {
                         etPassword.error = "Wrong Password"
                         etPassword.requestFocus()
                     } else { //bila tidak ada koneksi dll
                         Toast.makeText(activity, "${it.exception?.message}", Toast.LENGTH_SHORT)
                             .show()
-
                     }
                 }
-
             }
             btnUpdate.setOnClickListener{view -> it
                 val email = etEmail.text.toString().trim()
@@ -91,4 +80,4 @@ class UpdateEmailFragment : Fragment() {
             }
         }
     }
-    }
+}

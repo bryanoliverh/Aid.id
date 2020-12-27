@@ -8,7 +8,6 @@ import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_reset_password.*
 
-
 class ResetPasswordActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,26 +26,18 @@ class ResetPasswordActivity : AppCompatActivity() {
                 etEmail.requestFocus()
                 return@setOnClickListener
             }
-            //password reset to email with parameter: your inputted email
+
             FirebaseAuth.getInstance().sendPasswordResetEmail(email).addOnCompleteListener {
-//jika sukses ditampilkan toas bahwa email berhasil dikirim
                 if (it.isSuccessful){
                     Toast.makeText(this, "Please check your email for password reset", Toast.LENGTH_SHORT).show()
-                   //back to login activity
                     Intent(this@ResetPasswordActivity, LoginActivity::class.java).also{
-                        //after back will not go back to reset activity
                         it.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
                         startActivity(it)
-
-                    } }else{
+                    }
+                }else{
                         Toast.makeText( this, "${it.exception?.message}", Toast.LENGTH_SHORT).show()
                     }
-
-                }
             }
-
         }
-
-
-
     }
+}

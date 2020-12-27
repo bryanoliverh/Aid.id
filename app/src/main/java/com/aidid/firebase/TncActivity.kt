@@ -3,8 +3,6 @@ package com.aidid.firebase
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import kotlinx.android.synthetic.main.activity_aboutus.*
-import kotlinx.android.synthetic.main.activity_settings.*
 import kotlinx.android.synthetic.main.activity_tnc.*
 
 class TncActivity : AppCompatActivity() {

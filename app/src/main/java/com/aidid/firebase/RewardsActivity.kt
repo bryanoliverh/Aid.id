@@ -20,7 +20,6 @@ class RewardsActivity : AppCompatActivity() {
 
         rv_recyclerView.layoutManager = LinearLayoutManager(this)
         rv_recyclerView.adapter = RewardAdapter(titlesList, descList, imagesList)
-
     }
     private fun addToList(title: String, description: String, image: Int) {
         titlesList.add(title)
@@ -38,8 +37,5 @@ class RewardsActivity : AppCompatActivity() {
         addToList("10% Planet Sports Gift Coupon","Lorem Ipsum is simply dummy text of the printing and typesetting industry.", R.drawable.map_logo)
         addToList("10% Topman Gift Coupon","Lorem Ipsum is simply dummy text of the printing and typesetting industry.", R.drawable.map_logo)
         addToList("10% Lacoste Gift Coupon","Lorem Ipsum is simply dummy text of the printing and typesetting industry.", R.drawable.map_logo)
-
-//            addToList("Title $i", "Description $i", R.mipmap.ic_launcher_round)
-//        }
     }
 }

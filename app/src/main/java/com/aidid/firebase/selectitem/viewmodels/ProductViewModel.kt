@@ -94,8 +94,6 @@ class ProductViewModel : ViewModel(){
         }
         selectedProducts.postValue(tempSelectedProducts)
     }
-
     fun listenToProducts() = products
     fun listenToSelectedProduct() = selectedProducts
-
 }
