@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.aidid.firebase.selectitem.adapters.RewardAdapter
 import kotlinx.android.synthetic.main.activity_rewards.*
 
-class RewardsActivity : AppCompatActivity() {
+annotation class RewardsActivity : AppCompatActivity() {
 
     private var titlesList = mutableListOf<String>()
     private var descList = mutableListOf<String>()

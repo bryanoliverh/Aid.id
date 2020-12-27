@@ -1,5 +1,6 @@
 package com.aidid.firebase
 
+import android.annotation.SuppressLint
 import android.app.Activity.RESULT_OK
 import android.content.Intent
 import android.graphics.Bitmap
@@ -117,13 +118,12 @@ class ProfileFragment : Fragment() {
             Navigation.findNavController(it).navigate(actionChangePassword)
         }
     }
+    @SuppressLint("QueryPermissionsNeeded")
     private fun intentCamera(){
         Intent(MediaStore.ACTION_IMAGE_CAPTURE).also {intent ->
             activity?.packageManager?.let {
                 intent.resolveActivity(it).also {
                     startActivityForResult(intent, REQUEST_CAMERA)
-
-
                 }
             }
 
@@ -146,10 +146,8 @@ class ProfileFragment : Fragment() {
         imgBitmap.compress(Bitmap.CompressFormat.JPEG, 100, baos)
         val image = baos.toByteArray()
 
-
         ref.putBytes(image)
                 .addOnCompleteListener {
-
                     if (it.isSuccessful) {
                         ref.downloadUrl.addOnCompleteListener {
                             it.result?.let {
