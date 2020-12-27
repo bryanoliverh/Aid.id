@@ -9,8 +9,10 @@ import android.view.MenuItem
 import android.widget.LinearLayout
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.aidid.firebase.selectitem.adapters.PreCautionsAdapter
+import com.aidid.firebase.selectitem.adapters.SymptomsAdapter
+import com.aidid.firebase.selectitem.models.Model
 import com.android.volley.Request
-import com.android.volley.Response
 import com.android.volley.toolbox.StringRequest
 import com.android.volley.toolbox.Volley
 import com.google.firebase.auth.FirebaseAuth

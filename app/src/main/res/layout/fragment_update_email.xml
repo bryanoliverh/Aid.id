@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".UpdateEmailFragment">
+    tools:context=".selectitem.fragment.UpdateEmailFragment">
 
     //linear layout 1 for update password
     //when switching to this fragment yang akan tampil adalah pasword layout

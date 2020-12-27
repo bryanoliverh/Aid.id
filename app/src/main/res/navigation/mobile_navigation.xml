@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/nav_Profile"
-        android:name="com.aidid.firebase.ProfileFragment"
+        android:name="com.aidid.firebase.selectitem.fragment.ProfileFragment"
         android:label="Profile"
         tools:layout="@layout/fragment_profile1" >
         <action
@@ -19,7 +19,7 @@
     </fragment>
     <fragment
         android:id="@+id/updateEmailFragment2"
-        android:name="com.aidid.firebase.UpdateEmailFragment"
+        android:name="com.aidid.firebase.selectitem.fragment.UpdateEmailFragment"
         android:label="Update Email"
         tools:layout="@layout/fragment_update_email" >
         <action
@@ -30,7 +30,7 @@
     </fragment>
     <fragment
         android:id="@+id/changePasswordFragment"
-        android:name="com.aidid.firebase.ChangePasswordFragment"
+        android:name="com.aidid.firebase.selectitem.fragment.ChangePasswordFragment"
         android:label="Change Password"
         tools:layout="@layout/fragment_change_password" >
         //supaya di back ga balik ke halaman tersebut app:popUpToInclusive="true"

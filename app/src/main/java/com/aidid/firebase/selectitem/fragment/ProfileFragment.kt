@@ -1,4 +1,4 @@
-package com.aidid.firebase
+package com.aidid.firebase.selectitem.fragment
 
 import android.annotation.SuppressLint
 import android.app.Activity.RESULT_OK
@@ -12,16 +12,14 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
-import android.widget.EditText
-import android.widget.TextView
 import androidx.navigation.Navigation
+import com.aidid.firebase.selectitem.fragment.ProfileFragmentDirections
+import com.aidid.firebase.R
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.UserProfileChangeRequest
-import com.google.firebase.ktx.Firebase
 import com.google.firebase.storage.FirebaseStorage
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.*
-import kotlinx.android.synthetic.main.fragment_profile1.*
 import kotlinx.android.synthetic.main.fragment_profile1.*
 import java.io.ByteArrayOutputStream
 

@@ -5,7 +5,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.LinearLayout
 import androidx.recyclerview.widget.LinearLayoutManager
-import kotlinx.android.synthetic.main.activity_new_home.*
+import com.aidid.firebase.selectitem.adapters.PreCautionsAdapter
+import com.aidid.firebase.selectitem.models.Model
 import kotlinx.android.synthetic.main.activity_precaution.*
 
 class PreCautionActivity : AppCompatActivity() {

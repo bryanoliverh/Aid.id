@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.LinearLayout
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.aidid.firebase.selectitem.adapters.SymptomsAdapter
+import com.aidid.firebase.selectitem.models.Model
 import kotlinx.android.synthetic.main.activity_sympotms.*
 
 class SymptomsActivity : AppCompatActivity() {

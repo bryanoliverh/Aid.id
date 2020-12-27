@@ -1,4 +1,4 @@
-package com.aidid.firebase
+package com.aidid.firebase.selectitem.fragment
 
 import android.os.Bundle
 import android.util.Patterns
@@ -8,29 +8,34 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.navigation.Navigation
+import com.aidid.firebase.R
+import com.aidid.firebase.selectitem.fragment.UpdateEmailFragmentDirections
 import com.google.firebase.auth.EmailAuthProvider
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException
-import kotlinx.android.synthetic.main.fragment_change_password.*
+import kotlinx.android.synthetic.main.fragment_update_email.*
+import kotlinx.android.synthetic.main.fragment_update_email.etEmail
+import kotlinx.android.synthetic.main.fragment_update_email.etPassword
 
 
-class ChangePasswordFragment : Fragment() {
 
-    private lateinit var auth: FirebaseAuth
-
+class UpdateEmailFragment : Fragment() {
+   private lateinit var  auth :FirebaseAuth
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_change_password, container, false)
-    }
+        return inflater.inflate(R.layout.fragment_update_email, container, false)
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+    }
+    override fun  onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         auth = FirebaseAuth.getInstance()
         val user = auth.currentUser
+
+        //ketika pertama dibuka yang keluar adalah layout password
         layoutPassword.visibility = View.VISIBLE
-        layoutNewPassword.visibility = View.GONE
+        layoutEmail.visibility = View.GONE
 
         btnAuth.setOnClickListener {
             val password = etPassword.text.toString().trim()
@@ -46,7 +51,7 @@ class ChangePasswordFragment : Fragment() {
                     if (it.isSuccessful) {
 
                         layoutPassword.visibility = View.GONE
-                        layoutNewPassword.visibility = View.VISIBLE
+                        layoutEmail.visibility = View.VISIBLE
 
                     } else if (it.exception is FirebaseAuthInvalidCredentialsException) {
                         etPassword.error = "Wrong Password"
@@ -58,31 +63,25 @@ class ChangePasswordFragment : Fragment() {
                     }
                 }
 
-            }//change pass
+            }
             btnUpdate.setOnClickListener{view -> it
-                val newPassword = etNewPassword.text.toString().trim()
-                val newPasswordConfirm = etNewPasswordConfirm.text.toString().trim()
-                if (newPassword.isEmpty() || newPassword.length <6) {
-                    etNewPassword.error = "Password Must be More Than 6 characters"
-                    etNewPassword.requestFocus()
+                val email = etEmail.text.toString().trim()
+                if (email.isEmpty()) {
+                    etEmail.error = "Please Fill Your Email Address"
+                    etEmail.requestFocus()
                     return@setOnClickListener
-                }//if password not match (ketika di return maka akan keluar dari fungsi ini
-                //next process will not be executed
-                if (newPassword!= newPasswordConfirm) {
-                    etNewPassword.error = "Password not Match"
-                    etNewPasswordConfirm.requestFocus()
-                    return@setOnClickListener
-
                 }
-
+                if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+                    etEmail.error = "Your Email is Not Valid"
+                    etEmail.requestFocus()
+                    return@setOnClickListener
+                }
                 //check current user
                 user?.let {
-                    user.updatePassword(newPassword).addOnCompleteListener {
-                        if (it.isSuccessful){ //ketika pass berhasil diganti akan langsung pindah ke profile fragment
-                            val actionPasswordChange = ChangePasswordFragmentDirections.actionPasswordChange()
-                            Navigation.findNavController(view).navigate(actionPasswordChange)
-                                //menandakan proses berhasil
-                            Toast.makeText(activity, "Your Password has Changed Successfully!", Toast.LENGTH_SHORT).show()
+                    user.updateEmail(email).addOnCompleteListener {
+                        if (it.isSuccessful){
+                            val actionEmaillUpdated = UpdateEmailFragmentDirections.actionEmailUpdated()
+                            Navigation.findNavController(view).navigate(actionEmaillUpdated)
                         }else{
                             Toast.makeText(activity, "${it.exception?.message}", Toast.LENGTH_SHORT)
                                 .show()
@@ -91,10 +90,5 @@ class ChangePasswordFragment : Fragment() {
                 }
             }
         }
-
-
     }
-
-                    }
-
-
+    }

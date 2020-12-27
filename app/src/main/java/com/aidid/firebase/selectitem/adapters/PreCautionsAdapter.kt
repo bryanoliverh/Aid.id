@@ -1,13 +1,15 @@
-package com.aidid.firebase
+package com.aidid.firebase.selectitem.adapters
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.aidid.firebase.selectitem.models.Model
+import com.aidid.firebase.R
 
 class PreCautionsAdapter(var precautionsList: ArrayList<Model>):RecyclerView.Adapter<PreCautionsAdapter.ViewHolder>() {
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PreCautionsAdapter.ViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
 
         val inflater = LayoutInflater.from(parent.context)
         return ViewHolder(inflater,parent)
@@ -17,7 +19,7 @@ class PreCautionsAdapter(var precautionsList: ArrayList<Model>):RecyclerView.Ada
         return precautionsList.size
     }
 
-    override fun onBindViewHolder(holder: PreCautionsAdapter.ViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val symptomsModel = precautionsList[position]
         holder.bind(symptomsModel)
     }
