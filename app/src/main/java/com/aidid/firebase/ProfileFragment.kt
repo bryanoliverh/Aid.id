@@ -50,16 +50,10 @@ class ProfileFragment : Fragment() {
             }
             etName.setText(user.displayName)
             etEmail.setText(user.email)
-            etPhone.setText(user.phoneNumber)
             if (user.isEmailVerified) {
                 icVerified.visibility = View.VISIBLE
             } else {
                 icUnverified.visibility = View.VISIBLE
-            }
-            if (user.phoneNumber.isNullOrEmpty()) {
-                etPhone.setText(user.phoneNumber)
-            } else {
-                etPhone.setText(user.phoneNumber)
             }
         }
 
@@ -79,12 +73,6 @@ class ProfileFragment : Fragment() {
             if (name.isEmpty()) {
                 etName.error = "Please Enter Your Name"
                 etName.requestFocus()
-                return@setOnClickListener
-            }
-            val phone =etPhone.text.toString().trim()
-            if (phone.isEmpty()) {
-                etPhone.error = "Please Enter Your Phone Number"
-                etPhone.requestFocus()
                 return@setOnClickListener
             }
 

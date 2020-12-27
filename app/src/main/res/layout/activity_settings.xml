@@ -35,21 +35,6 @@
             app:layout_constraintVertical_bias="0.746" />
 
         <Button
-            android:id="@+id/etNotifications"
-            android:layout_width="289dp"
-            android:layout_height="68dp"
-            android:layout_gravity="center"
-            android:layout_marginTop="24dp"
-            android:text="Notifications"
-            android:textColor="@color/black"
-            android:textSize="18sp"
-            app:backgroundTint="@color/colorTosca"
-            app:cornerRadius="50dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/etUserSupport" />
-
-        <Button
             android:id="@+id/etProfButSet"
             android:layout_width="289dp"
             android:layout_height="68dp"

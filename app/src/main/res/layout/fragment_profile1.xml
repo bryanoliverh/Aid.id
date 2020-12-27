@@ -64,20 +64,6 @@
                 app:layout_constraintStart_toStartOf="@+id/etName"
                 app:layout_constraintTop_toBottomOf="@+id/etName" />
 
-            <EditText
-                android:id="@+id/etPhone"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:ems="10"
-                android:hint="Please Enter Your Phone Number"
-                android:focusableInTouchMode="false"
-                android:inputType="phone"
-                app:layout_constraintEnd_toEndOf="@+id/etName"
-                app:layout_constraintStart_toStartOf="@+id/etEmail"
-                app:layout_constraintTop_toBottomOf="@+id/etEmail"
-                android:importantForAutofill="no"/>
-
             <Button
                 android:id="@+id/btnUpdate"
                 android:layout_width="wrap_content"
@@ -87,9 +73,9 @@
                 android:text="Save"
                 android:textColor="#000"
                 app:cornerRadius="50dp"
-                app:layout_constraintEnd_toEndOf="@+id/etPhone"
-                app:layout_constraintStart_toStartOf="@+id/etPhone"
-                app:layout_constraintTop_toBottomOf="@+id/tvChangePassword" />
+                app:layout_constraintTop_toBottomOf="@+id/tvChangePassword"
+                tools:layout_editor_absoluteX="130dp"
+                tools:ignore="MissingConstraints" />
 
             <ImageView
                 android:id="@+id/icVerified"
@@ -117,13 +103,13 @@
                 android:id="@+id/tvChangePassword"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="8dp"
                 android:text="Change Password?"
                 android:textSize="14sp"
-                app:layout_constraintEnd_toEndOf="@+id/etPhone"
-                app:layout_constraintHorizontal_bias="1.0"
-                app:layout_constraintStart_toStartOf="@+id/etPhone"
-                app:layout_constraintTop_toBottomOf="@+id/etPhone" />
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/etEmail"
+                tools:ignore="MissingConstraints" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

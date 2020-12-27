@@ -30,11 +30,5 @@ class SettingsActivity : AppCompatActivity() {
             var intent = Intent(this@SettingsActivity, AboutusActivity::class.java)
             startActivity(intent)
         }
-
-        etNotifications.setOnClickListener {
-            var intent = Intent(this@SettingsActivity, NotificationsActivity::class.java)
-            startActivity(intent)
-        }
-
     }
 }
