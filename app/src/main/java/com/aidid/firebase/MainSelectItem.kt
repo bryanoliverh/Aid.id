@@ -25,7 +25,7 @@ class MainSelectItem : AppCompatActivity() {
         setContentView(R.layout.activity_mainselectitem)
         setupUI()
         btn_checkout.setOnClickListener {
-            val intent = Intent(this@MainSelectItem,ThankyouafterDonate::class.java)
+            val intent = Intent(this@MainSelectItem,Confirmationdonation::class.java)
             startActivity(intent)
         }
     }
